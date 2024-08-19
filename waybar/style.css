@@ -1,0 +1,357 @@
+@define-color fondo transparent;
+@define-color texto rgb(99, 147, 187);
+@define-color red #ff5151;
+@define-color orange #ffa73b;
+@define-color green #26A65B;
+@define-color selected rgba(0, 89, 107, 0.2);
+
+
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: Roboto Mono SemiBold, Iosevka Nerd Font;
+    font-size: 12px;
+    font-style: normal;
+    min-height: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+	}
+
+window#waybar {
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.248);
+    color: @fondo;
+
+}
+
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+
+tooltip {
+    background: #062035;
+    border: 1px solid @texto;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: @texto;
+}
+
+
+#clock, 
+#pulseaudio, 
+#network, 
+#custom-launcher, 
+#custom-pacmanAlt,
+#cpu,
+#memory,
+#disk,
+#cava,
+#taskbar,
+#workspaces,
+#pulseaudio, 
+#network, 
+#custom-launcher, 
+#custom-pacmanAlt,
+#memory,
+#disk,
+#cava,
+#taskbar,
+#workspaces,
+#temperature,
+#custom-wlogout,
+#custom-wallchange,
+#backlight,
+#battery
+#temperature,
+#custom-wlogout,
+#custom-wallchange,
+#backlight,
+#battery{
+    padding-left: 7px;
+    padding-right: 7px;
+    border: solid 0px @texto;
+    margin: 2px;
+    border-radius: 2px;
+}
+
+
+#pulseaudio:hover, 
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#backlight:hover,
+#battery:hover,
+#clock:hover,
+#custom-power:hover,
+#temperature:hover
+{
+    background-color: @selected;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#hyprland-workspaces{
+    color: @texto;
+}
+
+#cava{
+    background-color: @fondo;
+    color: @texto;
+    border-radius: 20px;
+    font-weight: bold;
+         
+}
+
+#tray {
+    background: @fondo;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+    padding: 0px 12px;
+    /*border-right: solid 1px #282738;*/
+}
+
+#clock {
+    color: @texto;
+    background-color: @fondo;
+    border: solid 1px @texto;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 0px;
+    margin: 2px;
+    font-weight: bold;
+    /*border-left: solid 1px #282738;*/
+}
+
+#network {
+    background-color: @fondo; 
+    color: @texto;
+    border-radius:2px;
+    min-width: 45px;
+
+}
+
+#network.disconnected {
+    color: #ff5151;
+}
+
+
+
+#custom-playerlabel{
+    color: @texto;
+}
+
+#custom-playerctl{
+    color: @texto;
+}
+
+
+
+#pulseaudio {
+    color: #5e81ac;
+    background: @fondo;
+    border-radius: 2px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#custom-launcher {
+    color: #cdd6f4;
+    background-color: @fondo;
+    border-radius: 0px 24px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0 20px 0 13px;
+    /*border-right: solid 1px #282738;*/
+    font-size: 20px;
+}
+
+#custom-launcher button:hover {
+    background-color: #FB4934;
+    color: transparent;
+    border-radius: 2px;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+#custom-playerctl {
+	background: @fondo;
+    padding: 0px 5px 0px 10px;
+	border-radius: 2px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin: 5px 7px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+}
+
+#custom-playerlabel {
+    background: transparent;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#window {
+    background: @fondo;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
+    color: @texto;
+}
+
+#cpu {
+    background-color: @fondo;
+    color: @texto;
+    border-radius: 2px;
+    padding: 0px 10px 0px 5px;
+    font-weight: bold;
+}
+
+#memory {
+    background-color: @fondo;
+    color: @texto;
+    border-radius: 2px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#disk {
+    background-color: @fondo;
+    color: #d08770;
+    border-radius: 2px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#taskbar {
+    background-color: #2BD2FF;
+    background-image: linear-gradient(45deg, #b48ead 0%, #5e81ac 52%, #b48ead 90%);
+    border-radius: 8px;
+}
+
+#taskbar button {
+    border-radius: 2px 2px 2px 2px;
+    padding: 0 0 0 1px;
+    margin: 4px 4px;
+    color: #ffffff;
+    background-color: rgba(120,118,117,0.1);
+}
+
+#taskbar button.active {
+    background-color: rgba(108, 122, 137, 1);
+}
+#temperature {
+  background-color: @fondo;
+  color: @texto;
+  border-radius: 2px;
+}
+
+#temperature.critical {
+  color: @red;
+  border-radius: 2px;
+}
+
+#custom-power {
+  background-color: @fondo;
+  border: solid 0px @texto;
+  color: @texto;
+  border-radius: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#custom-wallchange {
+  background-color: @fondo;
+  color: @texto;
+  border-radius: 2px;
+}
+
+#battery{
+    background-color: @fondo;
+    color: @texto;
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-right: 7px;
+}
+
+#backlight{
+    background-color: @fondo;
+    color: @texto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @texto;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 89, 107, 0.2);
+}
+
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+    }
+}
+
+#battery.charging{
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    background: transparent;
+    color: @orange;
+}
+
+#battery.critical:not(.charging) {
+    background: transparent;
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+

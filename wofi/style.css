@@ -1,0 +1,105 @@
+/*
+* wofi style. Colors are from authors below.
+* Base16 Gruvbox dark, medium
+* Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+*
+*/
+
+/*@define-color fondo #1e1e2e;
+@define-color overlay0 #585b70;
+@define-color surface0 #313244;
+@define-color texto #cdd6f4;
+@define-color blue #89b4fa;*/
+@define-color fondo #062035;
+/*@define-color fondo rgba(16, 47, 53, 0.95);*/
+@define-color overlay0 #0a2d4a;
+@define-color surface0 #0a2d4a;
+@define-color texto rgb(99, 147, 187);
+@define-color blue #89b4fa;
+
+
+
+
+    
+window {
+    opacity: 0.9;
+    border-radius: 5px;
+    border: 2px solid;
+    font-family: Roboto Mono SemiBold, Iosevka Nerd Font;
+    font-size: 18px;
+    font-style: normal;
+    margin: 0px;
+    border: 1px solid @texto;
+    background-color: @fondo;
+}
+
+#input {
+	border-radius: 4px;
+    border:  2px;
+    padding: 10px;
+    margin: 0px;
+    font-size: 18px;
+	color: whitesmoke;
+	background-color: @surface0;
+    
+}
+
+#inner-box {
+	margin: 10px;
+	color: @texto;
+	background-color: @fondo;
+    border-radius: 4px;
+}
+
+#outer-box {
+	margin: 1px;
+	background-color: @fondo;
+    border: 0px solid @blue;
+    border-radius: 4px;
+}
+
+#selected {
+	background-color:;
+}
+
+#entry {
+	padding: 4px;
+    margin: 0px;
+	background-color: @fondo;
+
+}
+
+#scroll {
+	margin: 5px;
+	background-color: @fondo;
+}
+
+#text {
+	margin: 0px;
+	padding: 2px 2px 2px 10px;
+}
+
+/* search icon */
+#input:first-child > :nth-child(1) {
+  min-height: 1.25em;
+  min-width: 1.25em;
+  color: @texto;
+}
+
+/* clear icon */
+#input:first-child > :nth-child(4){
+  background-image: -gtk-icontheme('open-menu-symbolic');
+  min-height: 1.25em;
+  min-width: 1.25em;
+  color: @texto;
+}
+
+
+
+
+
+
+
+
+
+

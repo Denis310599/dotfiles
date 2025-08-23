@@ -13,3 +13,6 @@ source ~/cosasMias/ricing/repos/znap/znap.zsh  # Start Znap
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 source ~/cosasMias/ricing/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh<D-
+echo ""
+fastfetch -c ~/cosasMias/ricing/dotfiles/fastfetch/14.jsonc

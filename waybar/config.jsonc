@@ -17,7 +17,9 @@
         "custom/playerlabel"
     ],
     "modules-right": [
-        "pulseaudio",
+        //"pulseaudio/slider",
+        //"pulseaudio",
+        "group/audio",
         "network",
         "power-profiles-daemon",
         "cpu",
@@ -152,7 +154,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "on-click": "gnome-system-monitor --show-resources-tab"
     },
     "backlight": {
@@ -169,7 +171,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -207,7 +209,7 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
+            "hands-free": "󰥰",
             "headset": "",
             "phone": "",
             "portable": "",
@@ -215,6 +217,22 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "group/audio":{
+        "orientation": "horizontal",
+        "drawer": {
+		"transition-duration": 500,
+		"transition-left-to-right": true
+	},
+        "modules": [
+            "pulseaudio",
+            "pulseaudio/slider"
+        ]
     },
     "custom/media": {
         "format": "{icon} {}",
